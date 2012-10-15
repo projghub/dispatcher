@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  feed_id: 1
+  request: MyString
+  date_from: 2012-10-15 11:05:25
+  date_to: 2012-10-15 11:05:25
+  include_downloaded: 1
+  sort_by: MyString
+  record_count: 1
+
+two:
+  feed_id: 1
+  request: MyString
+  date_from: 2012-10-15 11:05:25
+  date_to: 2012-10-15 11:05:25
+  include_downloaded: 1
+  sort_by: MyString
+  record_count: 1

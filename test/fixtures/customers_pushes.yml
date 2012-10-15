@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  customer_id: 1
+  push_id: 1
+  response: MyString
+
+two:
+  customer_id: 1
+  push_id: 1
+  response: MyString
