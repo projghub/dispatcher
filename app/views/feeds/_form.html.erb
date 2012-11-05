@@ -1,0 +1,62 @@
+<%= form_for @feed, :html => { :class => 'form-horizontal' } do |f| %>
+  <div class="control-group">
+    <%= f.label :url, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :url, :class => 'text_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :name, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :name, :class => 'text_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :customer_type, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :customer_type, :class => 'text_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :status, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :status, :class => 'text_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :seconds_old, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.number_field :seconds_old, :class => 'number_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :include_downloaded, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.number_field :include_downloaded, :class => 'number_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :api_username, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :api_username, :class => 'text_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :api_password, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :api_password, :class => 'text_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :sort_by, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :sort_by, :class => 'text_field' %>
+    </div>
+  </div>
+
+  <div class="form-actions">
+    <%= f.submit nil, :class => 'btn btn-primary' %>
+    <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
+                feeds_path, :class => 'btn' %>
+  </div>
+<% end %>

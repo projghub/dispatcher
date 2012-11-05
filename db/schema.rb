@@ -24,7 +24,7 @@ ActiveRecord::Schema.define(:version => 20121016014015) do
     t.integer  "order_id"
     t.integer  "pull_id"
     t.integer  "feed_id"
-    t.string   "type"
+    t.string   "customer_type"
     t.string   "first_name"
     t.string   "last_name"
     t.string   "email"
@@ -62,7 +62,7 @@ ActiveRecord::Schema.define(:version => 20121016014015) do
   create_table "feeds", :force => true do |t|
     t.string   "url"
     t.string   "name"
-    t.string   "type"
+    t.string   "customer_type"
     t.string   "status"
     t.integer  "seconds_old"
     t.integer  "include_downloaded"
@@ -81,7 +81,7 @@ ActiveRecord::Schema.define(:version => 20121016014015) do
   create_table "lists", :force => true do |t|
     t.integer  "vendor_id"
     t.string   "name"
-    t.string   "type"
+    t.string   "customer_type"
     t.string   "status"
     t.string   "account_number"
     t.datetime "created_at",     :null => false

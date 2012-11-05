@@ -1,0 +1,50 @@
+<%= form_for @pull, :html => { :class => 'form-horizontal' } do |f| %>
+  <div class="control-group">
+    <%= f.label :feed_id, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.number_field :feed_id, :class => 'number_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :request, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :request, :class => 'text_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :date_from, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.datetime_select :date_from, :class => 'datetime_select' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :date_to, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.datetime_select :date_to, :class => 'datetime_select' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :include_downloaded, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.number_field :include_downloaded, :class => 'number_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :sort_by, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :sort_by, :class => 'text_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :record_count, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.number_field :record_count, :class => 'number_field' %>
+    </div>
+  </div>
+
+  <div class="form-actions">
+    <%= f.submit nil, :class => 'btn btn-primary' %>
+    <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
+                pulls_path, :class => 'btn' %>
+  </div>
+<% end %>

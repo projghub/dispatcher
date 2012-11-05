@@ -4,7 +4,7 @@ class CreateCustomers < ActiveRecord::Migration
       t.integer :order_id
       t.integer :pull_id
       t.integer :feed_id
-      t.string :type
+      t.string :customer_type
       t.string :first_name
       t.string :last_name
       t.string :email

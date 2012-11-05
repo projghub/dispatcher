@@ -3,7 +3,7 @@ class CreateLists < ActiveRecord::Migration
     create_table :lists do |t|
       t.integer :vendor_id
       t.string :name
-      t.string :type
+      t.string :customer_type
       t.string :status
       t.string :account_number
 

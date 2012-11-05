@@ -3,7 +3,7 @@ class CreateFeeds < ActiveRecord::Migration
     create_table :feeds do |t|
       t.string :url
       t.string :name
-      t.string :type
+      t.string :customer_type
       t.string :status
       t.integer :seconds_old
       t.integer :include_downloaded
