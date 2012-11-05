@@ -1,4 +1,6 @@
 class ApiKey < ActiveRecord::Base
+  belongs_to :user
+
   attr_accessible :access_token
 
   before_create :generate_access_token

@@ -1,0 +1,16 @@
+<%= link_to "DISPATCH", root_path, :class => 'brand' %>
+<ul class="nav">
+  <% if current_user %>
+    <li><%= link_to 'Customers', customers_path %></li>
+    <li><%= link_to 'Users', users_path %></li>
+    <li><%= link_to 'Feeds', feeds_path %></li>
+    <li><%= link_to 'Lists', lists_path %></li>
+    <li><%= link_to 'Pulls', pulls_path %></li>
+    <li><%= link_to 'Pushes', pushes_path %></li>
+    <li><%= link_to 'Logout', logout_path %></li>
+  <% else %>
+    <li>
+    <%= link_to 'Login', login_path  %>  
+    </li>
+  <% end %>
+</ul>

@@ -15,6 +15,7 @@ ActiveRecord::Schema.define(:version => 20121016014015) do
 
   create_table "api_keys", :force => true do |t|
     t.string   "access_token"
+    t.integer  "user_id"
     t.datetime "created_at",   :null => false
     t.datetime "updated_at",   :null => false
   end
@@ -117,6 +118,7 @@ ActiveRecord::Schema.define(:version => 20121016014015) do
     t.string   "name"
     t.string   "oauth_token"
     t.datetime "oauth_expires_at"
+    t.string   "password_digest"
     t.datetime "created_at",       :null => false
     t.datetime "updated_at",       :null => false
   end

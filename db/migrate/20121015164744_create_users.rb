@@ -8,6 +8,8 @@ class CreateUsers < ActiveRecord::Migration
       t.string :oauth_token
       t.datetime :oauth_expires_at
 
+      t.string :password_digest
+
       t.timestamps
     end
   end

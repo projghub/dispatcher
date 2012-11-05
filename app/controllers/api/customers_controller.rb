@@ -1,15 +1,8 @@
 class Api::CustomersController < ApplicationController
   before_filter :restrict_access
 
-  def index
-    @customers = Customer.all
-    respond_to do |format|
-      format.json { render json: @customers }
-    end
-  end
-
   def create
-    @customer = Customer.create(params[:customer])
+    @customer = Customer.new(params[:customer])
 
     respond_to do |format|
       if @customer.save
@@ -31,6 +24,8 @@ class Api::CustomersController < ApplicationController
 private
   def restrict_access
     authenticate_or_request_with_http_token do |token, options|
+      #api_key = ApiKey.where(access_token: token).first
+      #@current_user = api_key.user if api_key
       ApiKey.exists?(access_token: token)
     end
   end
